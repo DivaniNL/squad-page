@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vh of vw is 1% van de hoogte of breedte */
+    height: 300vh;
+    width: 100vw;
+    /* side scrolling uit */
+    overflow-x: hidden;
+}
+
+header{
+    width: 90vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+
+.students{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: 
+    "a a a"
+    "b c d"
+    ;
+    background-color: #f0f0f0;
+
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: center;
+
+    padding: 2em;
+    gap: 0.5em;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+h2{
+    grid-area: a;
+}
+
+.profile_picture {
+    border-radius: 50%;
+    margin-top: 1em;
+}
+
+
+
+
+.collage {
+    display: grid;
+    grid-template-columns: min-content min-content  min-content min-content min-content min-content;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* grid indelen */
+    grid-template-areas:
+    /* title */
+    "a a a a a a"
+    /* foto hokjes */
+    "e f f g g n"
+    "e h h i i n"
+    "j j l l k k"
+    "j j m m k k"
+    ;
+    background-color: #f0f0f0;
+    padding: 10px;
+    gap: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items: center;
+
+    @media (max-width: 960px) {
+        grid-template-areas:
+        /* title */
+        "a a a a"
+        /* foto hokjes */
+        "e f f n"
+        "e g g n"
+        "h h i i"
+        "j j k k"
+        "l l m m"
+        ;
+
+        @media (max-width: 640px) {
+            grid-template-areas:
+            /* title */
+            "a a a"
+            /* foto hokjes */
+            "e f f"
+            "e g g"
+            "n h h"
+            "n i i"
+            "j j j"
+            "k k k"
+            "l l l"
+            "m m m"
+            ;
+        }
+    }
+}
+
+/* border maken om te zien hoe de vakken eruit zien */
+.area{
+    border: 2px solid black;
+    list-style-type: none;
+    height: 100%;
+}
+
+/* items zetten in de grid area's */
+img{
+    max-width: 100%;
+}
+.section_title{
+    grid-area: a;
+    width: 90vw;
+    border: 1em;
+}
+.area1{
+    grid-area: e;
+}
+.area2{
+    grid-area: f;
+}
+.area3{
+    grid-area: g;
+}
+.area4{
+    grid-area: h;
+}
+.area5{
+    grid-area: i;
+}
+.area6{
+    grid-area: j;
+}
+.area7{
+    grid-area: k;
+}
+.area8{
+    grid-area: l;
+}
+.area9{
+    grid-area: m;
+}
+.area10{
+    grid-area: n;
+}
