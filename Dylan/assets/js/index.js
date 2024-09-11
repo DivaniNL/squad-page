@@ -10,13 +10,13 @@ const swiper = new Swiper(".swiper-container", {
   },
   breakpoints: {
     // when window width is >= 480px
-    480: {
+    550: {
       slidesPerView: 2,
       centeredSlides: false,
       spaceBetween: 20,
     },
     // when window width is >= 640px
-    750: {
+    900: {
       slidesPerView: 3,
       centeredSlides: true,
       spaceBetween: 0

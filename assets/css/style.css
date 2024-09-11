@@ -1,0 +1,92 @@
+header {
+  height: 100px;
+  background-color: #c8da88;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+header a {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+section#people {
+  background-color: aquamarine;
+}
+section#people h1 {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 40px;
+}
+section#people .swiper {
+  max-width: 75%;
+  overflow: visible;
+}
+section#people .swiper .swiper-container {
+  height: 475px;
+  overflow: hidden;
+  padding: 100px 0;
+}
+section#people .swiper .swiper-container .caroussel_people .swiper-slide {
+  background-color: rebeccapurple;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  transition: 0.5s ease;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 750px) {
+  section#people .swiper .swiper-container .caroussel_people .swiper-slide-active {
+    transform: scale(1.15);
+    background-color: red;
+    z-index: 9;
+  }
+}
+section#people .swiper .swiper-container .caroussel_people .swiper-slide figure {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+section#people .swiper .swiper-container .caroussel_people .swiper-slide figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease;
+}
+section#people .swiper .swiper-container .caroussel_people .swiper-slide figure:hover img {
+  transform: scale(1.5);
+}
+section#people .swiper .swiper-container .caroussel_people .swiper-slide figcaption {
+  text-align: center;
+  padding-bottom: 20px;
+}
+section#people .swiper .swiper-button-prev {
+  left: unset;
+  right: calc(100% + 15px);
+}
+section#people .swiper .swiper-button-next {
+  right: unset;
+  left: calc(100% + 15px);
+}
+
+section#campus {
+  background-color: beige;
+  height: 100vh;
+}
+section#campus h2 {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */
