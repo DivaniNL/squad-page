@@ -88,7 +88,7 @@ section#people{
 ///SECTION CANVAS
 /// 
 
-section#campus{
+section#campushome{
     background-color: beige;
     min-height: 100vh;
     padding: 2rem;
@@ -98,21 +98,82 @@ section#campus{
         font-size: 30px;
     }
     .grid_campus{
-        .one_campus:nth-child(1) { background-color: red;}
-        .one_campus:nth-child(2) { background-color: green;}
-        .one_campus:nth-child(3) { background-color: yellow;}
-        .one_campus:nth-child(4) { background-color: purple;}
-        .one_campus:nth-child(5) { background-color: pink;}
-        .one_campus:nth-child(6) { background-color: orange;}
-        .one_campus:nth-child(7) { background-color: blue;}
-        .one_campus:nth-child(8) { background-color: cyan;}
-        .one_campus:nth-child(9) { background-color: black;}
-        .one_campus:nth-child(10) { background-color: black;}
+        display: grid;
+        gap: 1rem;
+        .one_campus{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            @media (max-width :1000px){
+                min-height: 40dvw;
+            }
+            figure{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            figcaption.textsection{
+                height: calc(100% - 2rem);
+                width: calc(100% - 2rem);
+                z-index: 2;
+                position: relative;
+                padding: 1rem;
+                box-sizing: border-box;
+                padding: 1.5rem;
+                display: grid;
+                grid-template-rows: max-content max-content 1fr;
+                h3, h4{
+                    margin: 0 0 1em 0;
+                }
+                p{
+                    margin: 0 0 1rem 0;
+                }
+                .button, button{
+                    margin-top: auto;
+                    text-decoration: none;
+                    color: red;
+                    cursor: pointer;
+                }
+                &:after{
+                    transition: 0.2s ease;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: -1;
+                    background: rgba($color: #fff, $alpha: 0.75);
+                }
+                @media(max-width :1000px){
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            @media(min-width :1000px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    figcaption.textsection:after{
+                        height: calc(100% + 2rem);
+                        width: calc(100% + 2rem);
+                        top: -1rem;
+                        left: -1rem;
+                    }   
+                }
+            }
+        }
+
         @media (min-width: 1000px){
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
             height: 100em;
-            gap: 1em;
             grid-template-areas: 
             "c1 c2"
             "c3 c2"
@@ -120,8 +181,6 @@ section#campus{
             "c5 c6"
             "c7 c8"
             "c9 c10";
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
             .one_campus:nth-child(1) { grid-area: c1;}
             .one_campus:nth-child(2) { grid-area: c2;}
             .one_campus:nth-child(3) { grid-area: c3;}
@@ -133,34 +192,7 @@ section#campus{
             .one_campus:nth-child(9) { grid-area: c9;}
             .one_campus:nth-child(10) { grid-area: c10;}
         }
-        @media (max-width: 1000px){
-            .one_campus{
-                height: 40dvw;
-                width: 100%;
-            }
-        }
     }
 }
 
 
-
-//home grid
-// .parent {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: repeat(5, 1fr);
-//     grid-column-gap: 0px;
-//     grid-row-gap: 0px;
-//     }
-    
-//     .div1 { grid-area: 2 / 1 / 4 / 2; }
-//     .div2 { grid-area: 1 / 1 / 2 / 2; }
-//     .div3 { grid-area: 1 / 3 / 3 / 5; }
-//     .div4 { grid-area: 3 / 3 / 4 / 5; }
-//     .div5 { grid-area: 1 / 2 / 3 / 3; }
-//     .div6 { grid-area: 3 / 2 / 4 / 3; }
-//     .div7 { grid-area: 4 / 2 / 6 / 3; }
-//     .div8 { grid-area: 4 / 1 / 6 / 2; }
-//     .div9 { grid-area: 6 / 1 / 8 / 2; }
-//     .div10 { grid-area: 6 / 2 / 8 / 3; }
-//     .div11 { grid-area: 7 / 2 / 8 / 3; }
