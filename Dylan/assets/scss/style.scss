@@ -2,7 +2,7 @@
 @import "./vars";
 @import "./mixins";
 @import "./header";
-@import "./campus";
+@import "./campusoverview";
 
 // Base values
 *{
@@ -11,7 +11,10 @@
     font-family: $font1;
 }
 
-
+a{
+    color: inherit;
+    text-decoration: none;
+}
 ///SECTION PEOPLE
 /// 
 
