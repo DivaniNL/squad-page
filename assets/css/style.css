@@ -42,7 +42,7 @@ section#people .swiper .swiper-container .caroussel_people .swiper-slide {
   align-items: center;
   flex-direction: column;
 }
-@media (min-width: 750px) {
+@media (min-width: 900px) {
   section#people .swiper .swiper-container .caroussel_people .swiper-slide-active {
     transform: scale(1.15);
     background-color: red;
