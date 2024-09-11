@@ -1,0 +1,87 @@
+
+<!-- Section with horizontal scrolling -->
+<div class="side-scroller-section">
+    <h2>Side Scroller Section</h2>
+    <div class="side-scroller">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+  </div>
+  
+<style>
+    
+    /* Container for horizontal scrolling */
+    .side-scroller-section {
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+    /* Horizontal scrolling container */
+    .side-scroller {
+        display: flex;
+        overflow-x: auto;           /* Enable horizontal scrolling */
+        white-space: nowrap;        /* Prevent wrapping of items */
+        padding: 10px;
+        gap: 10px;
+        scroll-behavior: smooth;    /* Optional: smooth scrolling */
+    }
+
+    /* Individual items inside the side scroller */
+    .item {
+        flex: 0 0 auto;             /* Ensure fixed size */
+        width: 250px;
+        height: 150px;
+        background-color: slateblue;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        border-radius: 8px;
+    }
+</style>
+
+
+<style>
+
+.container {
+    overflow-x: auto; /* Enables horizontal scrolling for the container */
+    white-space: nowrap; /* Prevents the sections from wrapping to the next line */
+}
+
+.section {
+    display: inline-block; /* Makes the sections display side-by-side */
+    width: 6em; /* Sets the width of each section to the full viewport width */
+    height: 5em; /* Sets the height of each section to 80% of the viewport height */
+    margin-right: 20px; /* Adds a 20px margin to the right of each section */
+    vertical-align: top; /* Aligns the top of each section with the top of the container */
+}
+
+
+
+.horizontal-scroll-wrapper {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: calc(#{$finalHeight} + #{$scrollBarHeight});
+    max-height: $finalWidth;
+    margin: 0;
+    padding-top: $scrollBarHeight;
+    background: #abc;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translateY(-$finalHeight);
+    transform-origin: right top;
+    & > div {
+      display: block;
+      padding: 5px;
+      background: #cab;
+      transform: rotate(90deg);
+      transform-origin: right top;
+    }
+  }
+</style>

@@ -8,36 +8,18 @@ body {
     justify-content: center;
     align-items: center;
     /* vh of vw is 1% van de hoogte of breedte */
-    height: 300vh;
-    width: 100vw;
+    min-height: 200vh;
+    max-width: 80vw;
+    padding-top: 2vh;
+    padding-left: 20vw;
     /* side scrolling uit */
     overflow-x: hidden;
 }
 
 header{
-    width: 90vw;
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.5em;
-}
-
-
-.students{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content;
-    grid-template-areas: 
-    "a a a"
-    "b c d"
-    ;
-    background-color: #f0f0f0;
-
-    border-radius: 5px;
-    border: 2px solid black;
-    text-align: center;
-
-    padding: 2em;
-    gap: 0.5em;
 }
 
 ul{
@@ -54,12 +36,50 @@ h2{
     grid-area: a;
 }
 
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* source: https://css-tricks.com/pure-css-horizontal-scrolling/ */
+section {
+    max-width: 82vw;
+}
+.horizontal-scroll-wrapper{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    max-width: 90vw;
+    padding: 2em;
+    gap: 0.5em;
+    background-color: #f0f0f0;
+
+    /* wel links rechts scrollen, maar nier naar boven en beneden */
+    overflow-y: hidden;
+    overflow-x: auto;
+    /* scroll-behavior: automatic; */
+    scrollbar-width: none;
+
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.student {
+    background-color: aliceblue;
+    box-sizing: border-box;
+    height: 20em;
+    width: 15em;
+    padding: 0.5em;
+}
+/* vergroot de kaart waarover je hover */
+.student:hover {
+    transform: scale(1.2);
+    background-color: rgb(207, 219, 245);
+}
+
 .profile_picture {
     border-radius: 50%;
     margin-top: 1em;
 }
-
-
 
 
 .collage {
@@ -114,48 +134,48 @@ h2{
 }
 
 /* border maken om te zien hoe de vakken eruit zien */
-.area{
+.area {
     border: 2px solid black;
     list-style-type: none;
     height: 100%;
 }
 
 /* items zetten in de grid area's */
-img{
+img {
     max-width: 100%;
 }
-.section_title{
+.section_title {
     grid-area: a;
-    width: 90vw;
+    width: 80vw;
     border: 1em;
 }
-.area1{
+.area1 {
     grid-area: e;
 }
-.area2{
+.area2 {
     grid-area: f;
 }
-.area3{
+.area3 {
     grid-area: g;
 }
-.area4{
+.area4 {
     grid-area: h;
 }
-.area5{
+.area5 {
     grid-area: i;
 }
-.area6{
+.area6 {
     grid-area: j;
 }
-.area7{
+.area7 {
     grid-area: k;
 }
-.area8{
+.area8 {
     grid-area: l;
 }
-.area9{
+.area9 {
     grid-area: m;
 }
-.area10{
+.area10 {
     grid-area: n;
 }
