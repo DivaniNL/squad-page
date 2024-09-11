@@ -1,0 +1,34 @@
+main#campus_overview{
+    section#campus{
+        padding: 2em;
+        .grid_campus{
+            display: grid;
+            grid-template-columns: 1fr;
+            @media (min-width: 1000px){
+                grid-template-columns: 1fr 1fr;
+            }
+            gap: 1em;
+            .one_campus{
+                display: grid;
+                grid-template-columns: max-content 1fr;          
+                background-color: white;
+                figure{
+                    height: 100%;
+                    display: flex;
+                    max-height: 200px;
+                    min-height: 100%;
+                    @media (max-width: 1000px){
+                        max-height: 300px;
+                    }
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+                figcaption{
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}
