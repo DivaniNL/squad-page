@@ -413,29 +413,39 @@
       height: 35vh;
       width: 100%;
       position: relative;
-      &:after{
-        background: rgba(255, 255, 255, 0.3);
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-      }
       img{
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      figcaption{
+      .main_grid{
         position: absolute;
-        bottom: 2rem;
-        left: 2rem;
-        font-size: 4em;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
         z-index: 2;
-        font-weight: bold;
-        color: darkblue;
+        background-color: transparent;
+        figcaption{
+            bottom: 2rem;
+            left: 2rem;
+            font-size: 4em;
+            z-index: 2;
+            font-weight: bold;
+            color: darkblue;
+            align-self: end;
+          }
+          &:after{
+            background: rgba(255, 255, 255, 0.3);
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
       }
+      
     }
     .main_grid {
       grid-template-columns: minmax(1rem, 1fr) minmax(0, 1240px) minmax(1em, 1fr);
