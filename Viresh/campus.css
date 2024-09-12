@@ -1,0 +1,60 @@
+/* section {
+    min-width: 80vw;
+    max-height: 100vh;
+} */
+
+.container {
+    min-width: 80vw;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    background-color: #f0f0f0;
+    padding: 10px;
+    gap: 1em;
+    /* border: 2px solid black; */
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+
+    @media (max-width: 960px) {
+        grid-template-areas:
+        "a at"
+        "b bt"
+        "c ct"
+        "d dt"
+        ;
+    }
+}
+
+.container-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "foto naam ."
+    "foto openingstijden openingstijden"
+    ;
+}
+
+li {
+    margin: 5px;
+    border: none;
+    background-color: #ffffff;
+    text-align: none;
+    border-radius: 5px;
+}
+
+.huis-foto {
+    grid-area: foto;
+}
+.huis-naam {
+    grid-area: naam;
+}
+.huis-info {
+    grid-area: info;
+}
+.huis-openingstijden {
+    grid-area: openingstijden;
+}

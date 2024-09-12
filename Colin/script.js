@@ -1,24 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        loop: true,
-        slidesPerView: 1,
-        centeredSlides: true,
-        spaceBetween: 10,
-
-        // Navigation
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // Pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        // Autoplay (optioneel)
-        autoplay: {
-            delay: 5000,
-        },
-    });
+const swiper = new Swiper(".swiper-container", {
+  loop: true,
+  initialSlide: 2,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    // when window width is >= 480px
+    550: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 0,
+    },
+    // when window width is >= 640px
+    900: {
+      slidesPerView: 5,
+      centeredSlides: true,
+      spaceBetween: -37
+    }
+  }
 });
