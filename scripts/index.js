@@ -17,9 +17,14 @@ const swiper = new Swiper(".swiper-container", {
     },
     // when window width is >= 640px
     900: {
-      slidesPerView: 5,
+      slidesPerView: 3,
       centeredSlides: true,
       spaceBetween: -37
-    }
+    },
+    1500: {
+        slidesPerView: 5,
+        centeredSlides: true,
+        spaceBetween: -37
+      }
   }
 });
