@@ -17,19 +17,13 @@ body {
 }
 
 header{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 5px;
     padding: 0.5em;
 }
 
 ul{
     list-style-type: none;
-}
-
-li{
-    border-radius: 5px;
-    border: 2px solid black;
-    text-align: center;
 }
 
 h2{
@@ -69,16 +63,24 @@ section {
     height: 20em;
     width: 15em;
     padding: 0.5em;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
 }
 /* vergroot de kaart waarover je hover */
 .student:hover {
     transform: scale(1.2);
     background-color: rgb(207, 219, 245);
+    border: 2px solid black;
 }
 
 .profile_picture {
     border-radius: 50%;
     margin-top: 1em;
+
+    max-width: 5em;
+    height: 5em;
 }
 
 
@@ -91,8 +93,8 @@ section {
     /* title */
     "a a a a a a"
     /* foto hokjes */
-    "e f f g g n"
-    "e h h i i n"
+    "e f f g g ."
+    ". h h i i n"
     "j j l l k k"
     "j j m m k k"
     ;
@@ -140,9 +142,11 @@ section {
     height: 100%;
 }
 
-/* items zetten in de grid area's */
+/* image neemt alle ruimte in de grid cell */
 img {
     max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 .section_title {
     grid-area: a;
