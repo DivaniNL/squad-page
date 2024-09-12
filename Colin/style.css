@@ -1,87 +1,163 @@
 body {
     box-sizing: border-box;
     margin: 0;
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
-ul{
-    list-style:none;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Poppins", system-ui;
 }
 
-/* Stijlen voor Swiper */
-.swiper-container {
-    width: 100%;
-    max-width: 600px;
-    height: 50vh;
-    margin: auto;
+a{
+    color: #eee;
+    text-decoration: none;
 }
 
-.swiper-slide {
+h1,h2{
+    font-weight: 600;
+    font-style: bold;
+}
+
+h3,h4,h5{
+    font-weight: 500;
+    font-style: medium;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.swiper {
+    max-width: 85%;
+    overflow: visible;
+}
+
+.swiper .swiper-container {
+    height: 30em;
+    overflow: hidden;
+    padding: 5em 0;
+}
+
+.swiper .swiper-container .caroussel_people .swiper-slide {
+    background-color: #eee;
+    border-radius: 0.8em;
+    box-sizing: border-box;
     display: flex;
+    transition: 0.5s ease;
     align-items: center;
-    justify-content: center;
-    background-color: lightgrey;
-    font-size: 20px;
+    flex-direction: column;
+}
+
+@media (min-width: 900px) {
+    .swiper .swiper-container .caroussel_people .swiper-slide-active {
+        transform: scale(1.2);
+        background-color: #25167a;
+        color: #eee;
+        z-index: 9;
+    }
+
+    .caroussel_people >:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev){
+        transform: scale(0.8);
+    }
+}
+
+.swiper .swiper-container .caroussel_people .swiper-slide figure {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.swiper .swiper-container .caroussel_people .swiper-slide figure img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease;
+}
+
+.swiper .swiper-container .caroussel_people .swiper-slide figure:hover img {
+    transform: scale(1.5);
+}
+
+.swiper .swiper-container .caroussel_people .swiper-slide figcaption {
     text-align: center;
+    padding-bottom: 20px;
 }
 
-.swiper-slide:nth-child(2) {
-    background-color: lightblue;
-    /* Highlight voor de middelste slide */
+.swiper .swiper-button-prev {
+    left: unset;
+    right: calc(100% + 15px);
 }
 
-/* Stijlen voor de Swiper-knoppen en paginatie */
-.swiper-button-next,
-.swiper-button-prev {
-    color: white;
-}
-
-.swiper-pagination-bullet {
-    background: rgba(0, 0, 0, 0.5);
+.swiper .swiper-button-next {
+    right: unset;
+    left: calc(100% + 15px);
 }
 
 
 .parent {
     display: grid;
     height: 90vh;
-    background-color: aqua;
     grid-template-columns: repeat(6, 1fr);
     /* 6 kolommen op grotere schermen */
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    gap: 0.1em;
 }
 
-.parent li{
+.parent li {
     background-color: gray;
-    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(26, 44, 211, 0.16);
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
 }
+
 
 .div1 {
     grid-area: 1 / 1 / 3 / 3;
+    background: url(images/benno_premselahuis.jpg);
 }
 
 .div2 {
     grid-area: 1 / 3 / 2 / 5;
+    background: url(images/cafe-ko.jpg);
 }
 
 .div3 {
     grid-area: 2 / 3 / 3 / 5;
+    background: url(images/cafe_fest.jpg);
 }
 
 .div4 {
     grid-area: 1 / 5 / 3 / 7;
+    background: url(images/spar_hva_campus_portrait.jpg);
 }
 
 .div5 {
     grid-area: 3 / 1 / 4 / 2;
+    background: url(images/speeltuin_1.jpg);
 }
 
 .div6 {
     grid-area: 3 / 2 / 4 / 3;
+    background: url(images/wibauthuis.jpg);
 }
 
 .div7 {
     grid-area: 4 / 1 / 5 / 3;
+
 }
 
 .div8 {
@@ -104,19 +180,46 @@ ul{
         grid-template-rows: repeat(7, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        }
-        
-        .div1 { grid-area: 1 / 1 / 3 / 2; }
-        .div2 { grid-area: 1 / 2 / 2 / 3; }
-        .div3 { grid-area: 2 / 2 / 3 / 3; }
-        .div4 { grid-area: 3 / 2 / 5 / 3; }
-        .div5 { grid-area: 3 / 1 / 4 / 2; }
-        .div6 { grid-area: 4 / 1 / 5 / 2; }
-        .div7 { grid-area: 5 / 2 / 6 / 3; }
-        .div8 { grid-area: 6 / 2 / 7 / 3; }
-        .div9 { grid-area: 5 / 1 / 8 / 2; }
-        .div10 { grid-area: 7 / 2 / 8 / 3; }
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .div3 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .div4 {
+        grid-area: 3 / 2 / 5 / 3;
+    }
+
+    .div5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .div6 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .div7 {
+        grid-area: 5 / 2 / 6 / 3;
+    }
+
+    .div8 {
+        grid-area: 6 / 2 / 7 / 3;
+    }
+
+    .div9 {
+        grid-area: 5 / 1 / 8 / 2;
+    }
+
+    .div10 {
+        grid-area: 7 / 2 / 8 / 3;
+    }
 }
-@media  screen and (max-width:600px) {
-    
-}
+
