@@ -23,11 +23,8 @@ header{
 }
 
 ul{
+    /* haal de bullets weg */
     list-style-type: none;
-}
-
-h2{
-    grid-area: a;
 }
 
 a {
@@ -37,10 +34,11 @@ a {
 
 
 /* source: https://css-tricks.com/pure-css-horizontal-scrolling/ */
+/* source */
 section {
-    max-width: 82vw;
+    max-width: 81vw;
 }
-.horizontal-scroll-wrapper{
+.horizontal_scroll_wrapper{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     max-width: 90vw;
@@ -48,10 +46,9 @@ section {
     gap: 0.5em;
     background-color: #f0f0f0;
 
-    /* wel links rechts scrollen, maar nier naar boven en beneden */
+    /* wel links rechts scrollen, maar niet naar boven en beneden */
     overflow-y: hidden;
-    overflow-x: auto;
-    /* scroll-behavior: automatic; */
+    overflow-x: scroll;
     scrollbar-width: none;
 
     border-radius: 5px;
@@ -71,6 +68,8 @@ section {
 /* vergroot de kaart waarover je hover */
 .student:hover {
     transform: scale(1.2);
+    transition: 0.5s;
+    cursor: pointer;
     background-color: rgb(207, 219, 245);
     border: 2px solid black;
 }
@@ -86,15 +85,15 @@ section {
 
 .collage {
     display: grid;
-    grid-template-columns: min-content min-content  min-content min-content min-content min-content;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, min-content);
+    grid-template-rows: repeat(4, 1fr);
     /* grid indelen */
     grid-template-areas:
     /* title */
-    "a a a a a a"
+    /* "a a a a a a" */
     /* foto hokjes */
-    "e f f g g ."
-    ". h h i i n"
+    "f f e e g g"
+    "h h e e i i"
     "j j l l k k"
     "j j m m k k"
     ;
@@ -105,38 +104,27 @@ section {
     border-radius: 5px;
     align-items: center;
 
-    @media (max-width: 960px) {
+    @media (max-width: 600px) {
         grid-template-areas:
         /* title */
-        "a a a a"
+        "a a"
         /* foto hokjes */
-        "e f f n"
-        "e g g n"
-        "h h i i"
-        "j j k k"
-        "l l m m"
+        "e e"
+        "f f"
+        "g g"
+        "h h"
+        "i i"
+        "j j"
+        "k k"
+        "l l"
+        "m m"	
         ;
-
-        @media (max-width: 640px) {
-            grid-template-areas:
-            /* title */
-            "a a a"
-            /* foto hokjes */
-            "e f f"
-            "e g g"
-            "n h h"
-            "n i i"
-            "j j j"
-            "k k k"
-            "l l l"
-            "m m m"
-            ;
-        }
     }
 }
 
 /* border maken om te zien hoe de vakken eruit zien */
 .area {
+    border-radius: 5px;
     border: 2px solid black;
     list-style-type: none;
     height: 100%;
@@ -144,14 +132,8 @@ section {
 
 /* image neemt alle ruimte in de grid cell */
 img {
-    max-width: 100%;
+    width: 26vw;
     height: 100%;
-    border-radius: 10px;
-}
-.section_title {
-    grid-area: a;
-    width: 80vw;
-    border: 1em;
 }
 .area1 {
     grid-area: e;
@@ -179,7 +161,4 @@ img {
 }
 .area9 {
     grid-area: m;
-}
-.area10 {
-    grid-area: n;
 }

@@ -34,7 +34,11 @@
     ;
 }
 
-li {
+img{
+    border-radius: 5px;
+}
+
+.list-style {
     margin: 5px;
     border: none;
     background-color: #ffffff;
