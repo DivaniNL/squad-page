@@ -133,6 +133,11 @@ a {
         "l l"
         "m m"	
         ;
+
+        img {
+            width: 80vw;
+            height: 100%;
+        }
     }
 }
 
