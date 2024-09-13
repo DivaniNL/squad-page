@@ -97,7 +97,7 @@
               }
             }
   
-            figcaption {
+            .textsection {
               text-align: center;
               padding-bottom: 20px;
             }
@@ -165,7 +165,7 @@
           }
         }
   
-        figcaption.textsection {
+        .textsection {
           height: calc(100% - 2rem);
           width: calc(100% - 2rem);
           z-index: 2;
@@ -218,7 +218,7 @@
           align-items: center;
   
           &:hover {
-            figcaption.textsection:after {
+            .textsection:after {
               height: calc(100% + 2rem);
               width: calc(100% + 2rem);
               top: -1rem;
@@ -373,7 +373,7 @@
             }
           }
   
-          figcaption {
+          .textsection {
             padding: 1rem;
             box-sizing: border-box;
             padding: 1.5rem;
@@ -427,7 +427,7 @@
         height: 100%;
         object-fit: cover;
       }
-      figcaption{
+      .textsection{
         position: absolute;
         bottom: 2rem;
         left: 2rem;
