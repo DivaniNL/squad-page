@@ -23,6 +23,7 @@ const swiper = new Swiper(".swiper-container", {
     },
     1500: {
         slidesPerView: 5,
+        initialSlide: 1,
         centeredSlides: true,
         spaceBetween: -37
       }

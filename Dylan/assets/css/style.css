@@ -539,3 +539,62 @@ main#campus_detail_outer{
     }
   }
 }
+main#campus_overview{
+  section#campus{
+      background-color: beige;
+      min-height: 100vh;
+      padding: 2rem;
+      h2{
+          padding: 0 0 2rem 0;
+          text-align: center;
+          font-size: 30px;
+      }
+      .grid_campus{
+          display: grid;
+          grid-template-columns: 1fr;
+          @media (min-width: 1000px){
+              grid-template-columns: 1fr 1fr;
+          }
+          gap: 1em;
+          .one_campus{
+              display: grid;     
+              background-color: white;
+              figure{
+                  height: 100%;
+                  display: flex;
+                  max-height: 200px;
+                  min-height: 100%;
+                  @media (max-width: 1000px){
+                      max-height: 300px;
+                  }
+                  img{
+                      object-fit: cover;
+                      width: 100%;
+                  }
+              }
+              figcaption{
+                  padding: 1rem;
+                  box-sizing: border-box;
+                  padding: 1.5rem;
+                  display: grid;
+                  grid-template-rows: max-content max-content 1fr;
+                  h3, h4{
+                      margin: 0 0 1em 0;
+                  }
+                  p{
+                      margin: 0 0 1rem 0;
+                  }
+                  .button, button{
+                      margin-top: auto;
+                      text-decoration: none;
+                      color: red;
+                      cursor: pointer;
+                  }
+              }
+              @media (min-width :1000px){
+                  grid-template-columns: max-content 1fr;     
+              }
+          }
+      }
+  }
+}
