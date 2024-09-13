@@ -46,6 +46,10 @@ img{
     border-radius: 5px;
 }
 
+.a_style {
+    color: blue;
+}
+
 .huis-foto {
     grid-area: foto;
 }

@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    background-color: #f0f0f0;
+    
     font-family: Arial, Helvetica, sans-serif;
 
     display: flex;
@@ -16,10 +19,11 @@ body {
     overflow-x: hidden;
 }
 
-header{
+.head{
     /* border: 2px solid black; */
     border-radius: 5px;
     padding: 0.5em;
+    text-align: center;
 }
 
 ul{
@@ -29,15 +33,25 @@ ul{
 
 a {
     text-decoration: none;
-    color: blue;
+    /* color: blue; */
 }
 
 
 /* source: https://css-tricks.com/pure-css-horizontal-scrolling/ */
 /* source */
-section {
+.sec_style {
     max-width: 81vw;
+
+    background-color: #f0f0f0;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    text-align: center;
 }
+
+.btn-style {
+    align-self: flex-start;
+}
+
 .horizontal_scroll_wrapper{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -99,8 +113,8 @@ section {
     ;
     background-color: #f0f0f0;
     padding: 10px;
-    gap: 5px;
-    border: 2px solid black;
+    gap: 1em;
+    /* border: 2px solid black; */
     border-radius: 5px;
     align-items: center;
 
