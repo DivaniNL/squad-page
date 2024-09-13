@@ -193,7 +193,7 @@ section#campushome {
         }
       }
 
-      figcaption.textsection {
+      .textsection {
         border-radius: 0.8em;
         height: calc(100% - 2rem);
         width: calc(100% - 2rem);
@@ -248,7 +248,7 @@ section#campushome {
         align-items: center;
 
         &:hover {
-          figcaption.textsection:after {
+          .textsection:after {
             height: calc(100% + 2rem);
             width: calc(100% + 2rem);
             top: -1rem;
@@ -404,7 +404,7 @@ main#campus_overview {
           }
         }
 
-        figcaption {
+        .textsection {
           padding: 1rem;
           box-sizing: border-box;
           padding: 1.5rem;
