@@ -1,0 +1,23 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", system-ui; /*font meegeven */
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,h2{
+    font-weight: 600;
+    font-style: bold;
+}
+
+h3,h4,h5{
+    font-weight: 500;
+    font-style: medium;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+

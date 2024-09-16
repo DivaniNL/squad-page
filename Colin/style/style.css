@@ -1,19 +1,22 @@
-body {
+body { 
     box-sizing: border-box;
     margin: 0;
     font-family: "Poppins", system-ui; /*font meegeven */
     font-weight: 400;
     font-style: normal;
+    background-color: #F0F8FF; /* Zacht lichtblauw voor de achtergrond */
 }
 
 h1,h2{
     font-weight: 600;
     font-style: bold;
+    color: #003366; /* Donkerblauw voor kopteksten */
 }
 
 h3,h4,h5{
     font-weight: 500;
     font-style: medium;
+    color: #00509E; /* Iets lichter blauw voor kleinere kopteksten */
 }
 
 ul {
@@ -21,9 +24,8 @@ ul {
     padding: 0px;
 }
 
-
 header{
-    background-color: #25167a;
+    background-color: #003366; /* Donkerblauw behouden */
     width: 100%;
     height: 15vh;
 }
@@ -45,7 +47,7 @@ nav{ /*navigatie container van de linkjes */
 
 .nav-item{
     text-decoration: none;
-    color: #eee;
+    color: #ffffff; /* Wit voor navigatie links */
 }
 
 .swiper {
@@ -56,7 +58,7 @@ nav{ /*navigatie container van de linkjes */
 }
 
 .swiper  a{
-    color: #eee;
+    color: #003366; /* Donkerblauw voor links */
     text-decoration: underline;
 }
 
@@ -67,17 +69,14 @@ nav{ /*navigatie container van de linkjes */
 }
 
 .swiper .swiper-container .caroussel_people .swiper-slide { /* de kaartjes stylen die niet actief zijn */
-    background-color: #eee;
+    background-color: #E6F9FF; /* Lichtblauw voor de achtergrond van inactieve kaarten */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.8em;
     box-sizing: border-box;
-    display: flex;
     transition: 0.5s ease;
-    align-items: center;
-    flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -119,7 +118,7 @@ nav{ /*navigatie container van de linkjes */
 }
 
 .campus{
-    background-color: #25167a;
+    background-color: #003366; /* Donkerblauw voor de campussectie */
 }
 
 .grid-container{
@@ -135,7 +134,6 @@ nav{ /*navigatie container van de linkjes */
     padding: 0.1em;
     height: 100vh;
     grid-template-columns: repeat(6, 1fr);
-    /* 6 kolommen op grotere schermen */
     grid-template-rows: repeat(4, 1fr);
     gap: 0.1em;
 }
@@ -145,18 +143,17 @@ nav{ /*navigatie container van de linkjes */
     background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(26, 44, 211, 0.16);
+    box-shadow: inset 0 0 0 1000px rgba(26, 44, 211, 0.16); /* Zachte blauwe schaduw */
     background-position: 50% 50%;
     height: 100%;
     width: 100%;
-
 }
 
 .campus-grid li:hover, .parent li:active{
-    box-shadow: inset 0 0 0 1000px rgba(26, 26, 26, 0.421);
+    box-shadow: inset 0 0 0 1000px rgba(0, 51, 102, 0.5); /* Donkerblauw bij hover */
 }
 
-.div1 { /*locatie aangevebn en achtergrond foto plaatsen*/
+.div1 { /*locatie aangeven en achtergrond foto plaatsen*/
     grid-area: 1 / 1 / 3 / 3;
     background: url(images/benno_premselahuis.jpg);
 }
@@ -202,11 +199,12 @@ nav{ /*navigatie container van de linkjes */
     grid-area: 4 / 5 / 5 / 7; 
 }
 
+
 @media (min-width: 900px) {
     .swiper .swiper-container .caroussel_people .swiper-slide-active { /*actieve slider*/
         transform: scale(1.2);
-        background-color: rgba(36, 6, 119, 1);
-        color: #eee;
+        background-color: rgba(0, 80, 158, 1); /* Donkerder blauw voor actieve slides */
+        color: #ffffff; /* Witte tekst op actieve slide */
         z-index: 9;
     }
 
@@ -214,7 +212,6 @@ nav{ /*navigatie container van de linkjes */
         transform: scale(0.8);
     }
 }
-
 
 /* Media query voor mobiele apparaten (max breedte 768px) */
 @media (max-width: 1100px) {
@@ -231,7 +228,7 @@ nav{ /*navigatie container van de linkjes */
         grid-row-gap: 0px;
         height: 140vh;
     }
-/*nieuwe locaties grid  voor op mobiel*/
+
     .div1 { grid-area: 1 / 1 / 3 / 2; }
 
     .div2 { grid-area: 1 / 2 / 2 / 3; }
