@@ -48,7 +48,41 @@ header {
 
   }
 }
-
+.button,
+button {
+  margin-top: auto;
+  text-decoration: none;
+  color: var(--color1);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  padding: 0.75rem;
+  padding-right: calc;
+  border-radius: 1rem;
+  background-image: linear-gradient( var(--color4) 50%, var(--color1) 50% );
+  background-size:100% 200%;
+  background-position:top;
+  width: fit-content;
+  font-size: 10px;
+  align-items: center;
+  transition: 0.5s ease;
+  svg{
+    transition: 0.5s ease;
+    >path{
+      transition: 0.5s ease;
+    }
+  }
+  &:hover{
+    background-position: bottom;
+    color: var(--white);
+    svg{
+      transform: translateX(0.3rem);
+      >path{
+        stroke: var(--white);
+      }
+    }
+  }
+}
 /* ///SECTION PEOPLE
 ///  */
 
@@ -158,16 +192,6 @@ section#campushome {
   .button_all_campus{
     margin: 2rem auto 0 auto;
     font-weight: bold;
-    color: var(--color2);
-    border: 0.3rem solid var(--color2);
-    padding: 1rem;
-    border-radius: 0.8rem;
-    transition: 0.2s ease;
-    &:hover{
-      background-color: var(--color2);
-      color: var(--white);
-
-    }
   }
   .grid_campus {
     display: grid;
@@ -207,7 +231,7 @@ section#campushome {
         grid-template-rows: max-content max-content 1fr;
         &.desktop-small{ /* These squares are smaller on the grid on larger desktops > 1450px */
           @media (min-width: 1450px){
-            padding: 1.5rem 1.5rem 3.5rem;
+            padding: 1.5rem 1rem 3.5rem;
           } 
         }
         h3,
@@ -220,14 +244,6 @@ section#campushome {
           margin: 0 0 1rem 0;
         }
 
-        .button,
-        button {
-          margin-top: auto;
-          text-decoration: none;
-          color: var(--color1);
-          font-weight: bold;
-          cursor: pointer;
-        }
 
         &:after {
           transition: 0.2s ease;
