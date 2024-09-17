@@ -124,6 +124,10 @@ section#people {
             }
           }
         }
+        
+      }
+      .caroussel_people >:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev){
+        transform: scale(0.8);
       }
     }
 

@@ -438,141 +438,179 @@ main#campus_overview {
     }
   }
 }
-main#campus_detail_outer{
-  display: grid;
-  gap: 2rem;
-  background-color: var(--color2);
-  figure.bgCampus{
-    height: 35vh;
+body.detail{
+  body { 
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F0F8FF;
+    /* Zacht lichtblauw voor de achtergrond */
+}
+
+h1, h2 {
+    font-weight: 600;
+    font-style: bold;
+    color: #003366;
+    /* Donkerblauw voor kopteksten */
+}
+
+h3, h4, h5 {
+    font-weight: 500;
+    font-style: medium;
+    color: #00509E;
+    /* Iets lichter blauw voor kleinere kopteksten */
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+header {
+    background-color: #003366;
+    /* Donkerblauw behouden */
     width: 100%;
-    position: relative;
-    &:after{
-      background: rgba(255, 255, 255, 0.3);
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
+    height: 15vh;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #ffffff;
+    /* Wit voor navigatie links */
+}
+
+.intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background: url(/squad-page/images/campus/cafe-ko.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 40vh;
+    width: 100%;
+}
+
+.intro-title {
+    text-shadow: 3px 3px 3px #1d1d1b;
+    font-size: 3em;
+    color: #eee;
+    margin-left: 5vw;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-content {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Zorgt ervoor dat de afbeelding altijd netjes binnen de sectie past */
+}
+
+.right-content {
+    width: 60%;
+    color: #003366;
+    /* Donkerblauw voor tekst in de rechterkolom */
+    background-color: #E6F9FF;
+    /* Zachte blauwe achtergrondkleur voor de inhoud */
+    padding: 20px;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-content h2 {
+    margin-bottom: 1em;
+}
+
+table {
+    width: 60%;
+    border-collapse: separate; /* Gebruik 'separate' om border-radius zichtbaar te maken */
+    border-spacing: 0;
+    background-color: rgba(0, 51, 102, 0.1);
+    border-radius: 0.3em; /* Border-radius van 0.8em */
+    overflow: hidden;
+    margin-top: 20px;
+    text-align: left;
+}
+thead {
+    font-weight: 500;
+    font-style: bold;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+td {
+    
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #003366;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Media query voor mobiele apparaten (max breedte 768px) */
+@media (max-width: 768px) {
+    .left-content, .right-content {
+        width: 100%;
     }
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+
+    .left-content {
+        margin-bottom: 20px;
     }
-    figcaption{
-      position: absolute;
-      bottom: 2rem;
-      left: 2rem;
-      font-size: 4em;
-      z-index: 2;
-      font-weight: bold;
-      color: var(--color1);
+
+    .left-content img {
+        width: 100%;
+        /* Op mobiele apparaten vult de afbeelding de volledige breedte van de sectie */
     }
-  }
-  .main_grid {
-    grid-template-columns: minmax(1rem, 1fr) minmax(0, 1240px) minmax(1em, 1fr);
-    display: grid;
-    background-color: var(--color2);
-  
-    article.campus_detail_container {
-      height: 500px;
-      background-color: white;
-      display: flex;
-      gap: 5rem;
-      border-radius: 0.8em;
-      overflow: hidden;
-      margin: 0 0 2rem 0;
-      aside{
-        figure{
-          height: 100%;
-          img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-      section {
-        display: flex;
-        align-items: center;
-        table {
-          border-radius: 0.8em;
-          overflow: hidden;
-          border-bottom-left-radius: 0.8em;
-          th,
-          td {
-            padding: 10px;
-            text-align: left;
-  
-            a {
-              color: var(--color1);
-              font-weight: bold;
-              transition: 0.2s ease;
-  
-              &:hover {
-                color: var(--white);
-              }
-            }
-          }
-  
-          thead {
-            tr {
-              th {
-                background-color: var(--color2);
-                color: var(--white);
-              }
-            }
-          }
-  
-          tbody {
-            tr {
-              &:nth-child(even) {
-                td {
-                  background-color: var(--white);
-                  border: 1px solid var(--color2);
-                }
-              }
-  
-              &:nth-child(odd) {
-                td {
-                  background-color: var(--color2);
-                  color: white;
-                  border: 1px solid var(--color2);
-                }
-              }
-  
-              &:last-child {
-                td {
-                  border-bottom: 2px solid var(--color2);
-  
-                  &:first-child {
-                    border-bottom-left-radius: 0.8em;
-                  }
-  
-                  &:last-child {
-                    border-bottom-right-radius: 0.8em;
-                  }
-                }
-              }
-  
-              td {
-                font-size: 12px;
-  
-                &:first-child {
-                  border-left: 2px solid var(--color2);
-                }
-  
-                &:last-child {
-                  border-right: 2px solid var(--color2);
-                }
-              }
-            }
-          }
-        }
-      }
+
+    .intro-title {
+        font-size: 2em;
     }
-  }
+}
+
 }
 footer{
   background-color: var(--color1);
