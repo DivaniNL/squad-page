@@ -59,7 +59,7 @@ nav {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    background: url(/squad-page/images/campus/cafe-ko.webp);
+    background: url(./../images/campus/cafe-ko.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -71,7 +71,7 @@ nav {
     text-shadow: 3px 3px 3px #1d1d1b;
     font-size: 3em;
     color: #eee;
-    margin-left: 5vw;
+    margin-left: 7vw;
 }
 
 main {
@@ -124,6 +124,7 @@ table {
     margin-top: 20px;
     text-align: left;
 }
+
 thead {
     font-weight: 500;
     font-style: bold;
@@ -132,7 +133,6 @@ thead {
 }
 
 td {
-    
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
@@ -151,7 +151,7 @@ tr:last-child td {
 }
 
 /* Media query voor mobiele apparaten (max breedte 768px) */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .left-content, .right-content {
         width: 100%;
     }
@@ -162,10 +162,17 @@ tr:last-child td {
 
     .left-content img {
         width: 100%;
+        max-height: 30vh;
+        object-fit: cover;
         /* Op mobiele apparaten vult de afbeelding de volledige breedte van de sectie */
     }
 
     .intro-title {
         font-size: 2em;
+    }
+
+    table{
+        width: 80%;
+        margin: 1em auto;
     }
 }
