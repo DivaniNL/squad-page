@@ -25,7 +25,7 @@ const swiper = new Swiper(".swiper-container", {
         slidesPerView: 5,
         initialSlide: 1,
         centeredSlides: true,
-        spaceBetween: -37
+        spaceBetween: -25
       }
   }
 });
