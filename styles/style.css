@@ -839,7 +839,8 @@ footer {
   background-color: #ffffff;
   text-align: none;
   border-radius: 5px;
-  min-height: 10em;
+  min-height: 15em;
+  min-width: 10em;
   list-style-type: none;
 
   @media (max-width: 700px) {
