@@ -713,6 +713,8 @@ nav {
     overflow: hidden;
     margin-top: 20px;
     text-align: left;
+    /* viresh */
+    border: 1px solid black;
   }
 
   thead {
@@ -723,19 +725,21 @@ nav {
   }
 
   td {
-
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    /* viresh */
+    border: 1px solid black;
   }
 
   tbody tr:nth-child(odd) {
-    /* ---------------------------------------------- */
-    background-color: #003366;
-    color: #fff;
+    background-color: #ffffff;
+    /* viresh */
+    /* color: #fff; */
   }
 
   tbody tr:nth-child(even) {
     background-color: transparent;
+    border: 1px solid black;
   }
 
   tr:last-child td {
@@ -777,7 +781,7 @@ footer {
 /* ------------------------------ */
 /* viresh campus page */
 
-.container {
+.list_container {
   width: 100%;
 
   display: grid;
