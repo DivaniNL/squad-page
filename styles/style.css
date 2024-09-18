@@ -4,6 +4,7 @@
   --color2: #001F54;
   --color3: #034078;
   --color4: #1282A2;
+  --color5: #FFCD4C;
   --white: #FEFCFB;
 }
 
@@ -57,7 +58,7 @@ button {
   cursor: pointer;
   display: flex;
   padding: 0.75rem;
-  padding-right: calc;
+  padding-right: calc(1.05rem);
   border-radius: 1rem;
   background-image: linear-gradient( var(--color4) 50%, var(--color1) 50% );
   background-size:100% 200%;
@@ -95,7 +96,7 @@ section#people {
   }
 
   .swiper {
-    max-width: 75%;
+    max-width: 90%;
     overflow: visible;
 
     .swiper-container {
@@ -139,9 +140,29 @@ section#people {
             }
           }
 
-          figcaption {
+          .textsection {
             text-align: center;
             padding-bottom: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-direction: column;
+            height: 100%;
+            .button{
+              padding: 0.75rem;
+              padding-right: calc(1.05rem);
+              font-size: 1rem;
+              svg{
+                width: 1rem;
+                margin-left: 5px;
+                color: var(--white);
+                >*{
+                  fill: var(--white);
+                  stroke: var(--white);
+                }
+              }
+            }
           }
         }
 
@@ -151,11 +172,40 @@ section#people {
             transform: scale(1.15);
             background-color: var(--color4);
             z-index: 9;
-            figcaption{
+            .textsection {
+              text-align: center;
+              padding-bottom: 20px;
               color: var(--white);
+              .button{
+                background-image: linear-gradient( var(--color5) 50%, var(--color1) 50% );
+                color: var(--color1);
+                svg{
+                  width: 1rem;
+                  margin-left: 5px;
+                  color: var(--color1);
+                  >*{
+                    fill: var(--color1);
+                    stroke: var(--white);
+                  }
+                }
+                &:hover{
+                  color: var(--white);
+                  svg{
+                    color: var(--white);
+                    >*{
+                      fill: var(--white);
+                      stroke: var(--white);
+                    }
+                  }
+                }
+
+              }
             }
           }
         }
+      }
+      .caroussel_people >:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev){
+        transform: scale(0.8);
       }
     }
 
@@ -190,6 +240,10 @@ section#campushome {
   .button_all_campus{
     margin: 2rem auto 0 auto;
     font-weight: bold;
+    font-size: 1rem;
+    svg{
+      width: 1rem;
+    }
   }
   .grid_campus {
     display: grid;
@@ -672,11 +726,6 @@ footer{
 
 /* ------------------------------ */
 /* viresh campus page */
-
-.h1_title {
-  color: #e2ad0f;
-}
-
 .container {
   min-width: 80vw;
 
