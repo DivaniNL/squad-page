@@ -49,6 +49,7 @@ header {
 
   }
 }
+
 .button,
 button {
   margin-top: auto;
@@ -60,28 +61,32 @@ button {
   padding: 0.75rem;
   padding-right: calc(1.05rem);
   border-radius: 1rem;
-  background-image: linear-gradient( var(--color4) 50%, var(--color1) 50% );
-  background-size:100% 200%;
-  background-position:top;
+  background-image: linear-gradient(var(--color4) 50%, var(--color1) 50%);
+  background-size: 100% 200%;
+  background-position: top;
   width: fit-content;
   font-size: 10px;
   align-items: center;
   transition: 0.5s ease;
-  svg{
+
+  svg {
     transition: 0.5s ease;
-    >path{
+
+    >path {
       transition: 0.5s ease;
       stroke: var(--white);
     }
   }
-  &:hover{
+
+  &:hover {
     background-position: bottom;
 
-    svg{
+    svg {
       transform: translateX(0.3rem);
     }
   }
 }
+
 /* ///SECTION PEOPLE
 ///  */
 
@@ -149,15 +154,18 @@ section#people {
             gap: 1rem;
             flex-direction: column;
             height: 100%;
-            .button{
+
+            .button {
               padding: 0.75rem;
               padding-right: calc(1.05rem);
               font-size: 1rem;
-              svg{
+
+              svg {
                 width: 1rem;
                 margin-left: 5px;
                 color: var(--white);
-                >*{
+
+                >* {
                   fill: var(--white);
                   stroke: var(--white);
                 }
@@ -172,27 +180,34 @@ section#people {
             transform: scale(1.15);
             background-color: var(--color4);
             z-index: 9;
+
             .textsection {
               text-align: center;
               padding-bottom: 20px;
               color: var(--white);
-              .button{
-                background-image: linear-gradient( var(--color5) 50%, var(--color1) 50% );
+
+              .button {
+                background-image: linear-gradient(var(--color5) 50%, var(--color1) 50%);
                 color: var(--color1);
-                svg{
+
+                svg {
                   width: 1rem;
                   margin-left: 5px;
                   color: var(--color1);
-                  >*{
+
+                  >* {
                     fill: var(--color1);
                     stroke: var(--white);
                   }
                 }
-                &:hover{
+
+                &:hover {
                   color: var(--white);
-                  svg{
+
+                  svg {
                     color: var(--white);
-                    >*{
+
+                    >* {
                       fill: var(--white);
                       stroke: var(--white);
                     }
@@ -204,7 +219,8 @@ section#people {
           }
         }
       }
-      .caroussel_people >:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev){
+
+      .caroussel_people>:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev) {
         transform: scale(0.8);
       }
     }
@@ -232,28 +248,34 @@ section#campushome {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+
   h2 {
     padding: 0 0 2rem 0;
     text-align: center;
     font-size: 30px;
   }
-  .button_all_campus{
+
+  .button_all_campus {
     margin: 2rem auto 0 auto;
     font-weight: bold;
     font-size: 1rem;
-    svg{
+
+    svg {
       width: 1rem;
     }
   }
+
   .grid_campus {
     display: grid;
     gap: 1rem;
+
     .one_campus {
       position: relative;
       height: 100%;
       width: 100%;
       border-radius: 0.8em;
       overflow: hidden;
+
       @media (max-width :1000px) {
         min-height: 40dvw;
       }
@@ -263,6 +285,7 @@ section#campushome {
         width: 100%;
         height: 100%;
         border-radius: 0.8em;
+
         img {
           width: 100%;
           height: 100%;
@@ -278,14 +301,18 @@ section#campushome {
         position: relative;
         padding: 1rem;
         box-sizing: border-box;
-        padding: 1.5rem; 
+        padding: 1.5rem;
         display: grid;
         grid-template-rows: max-content max-content 1fr;
-        &.desktop-small{ /* These squares are smaller on the grid on larger desktops > 1450px */
-          @media (min-width: 1450px){
+
+        &.desktop-small {
+
+          /* These squares are smaller on the grid on larger desktops > 1450px */
+          @media (min-width: 1450px) {
             padding: 1.5rem 1rem 3.5rem;
-          } 
+          }
         }
+
         h3,
         h4 {
           margin: 0 0 1em 0;
@@ -463,6 +490,7 @@ main#campus_overview {
         background-color: var(--white);
         border-radius: 0.8em;
         overflow: hidden;
+
         figure {
           height: 100%;
           display: flex;
@@ -513,8 +541,9 @@ main#campus_overview {
     }
   }
 }
-body.detail{
-  body { 
+
+body.detail {
+  body {
     box-sizing: border-box;
     margin: 0;
     font-family: "Poppins", system-ui;
@@ -522,33 +551,37 @@ body.detail{
     font-style: normal;
     background-color: #F0F8FF;
     /* Zacht lichtblauw voor de achtergrond */
-}
+  }
 
-h1, h2 {
+  h1,
+  h2 {
     font-weight: 600;
     font-style: bold;
     color: #003366;
     /* Donkerblauw voor kopteksten */
-}
+  }
 
-h3, h4, h5 {
+  h3,
+  h4,
+  h5 {
     font-weight: 500;
     font-style: medium;
     color: #00509E;
     /* Iets lichter blauw voor kleinere kopteksten */
-}
+  }
 
-ul {
+  ul {
     list-style: none;
     padding: 0px;
-}
+  }
 
-header {
+  header {
     background-color: #003366;
     /* Donkerblauw behouden */
     /* height: 15vh; */
-}
-/* 
+  }
+
+  /* 
 nav {
     width: 100%;
     height: 100%;
@@ -557,19 +590,19 @@ nav {
     align-items: center;
 } */
 
-.nav-list {
+  .nav-list {
     display: flex;
     flex-direction: row;
     gap: 1em;
-}
+  }
 
-.nav-item {
+  .nav-item {
     text-decoration: none;
     color: #ffffff;
     /* Wit voor navigatie links */
-}
+  }
 
-.intro {
+  .intro {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -578,48 +611,58 @@ nav {
     background-position: 50% 50%;
     height: 40vh;
     width: 100%;
-    &.ko{
+
+    &.ko {
       background-image: url(./../images/campus/cafe-ko.webp);
     }
-    &.fest{
+
+    &.fest {
       background-image: url(./../images/campus/cafe_fest.webp);
     }
-    &.bph{
+
+    &.bph {
       background-image: url(./../images/campus/benno_premselahuis.webp);
     }
-    &.usc{
+
+    &.usc {
       background-image: url(./../images/campus/usc_2.jpg);
     }
-    &.spar{
+
+    &.spar {
       background-image: url(./../images/campus/spar_hva_campus.webp);
     }
-    &.ksh{
+
+    &.ksh {
       background-image: url(./../images/campus/ksh.jpg);
     }
-    &.tth{
+
+    &.tth {
       background-image: url(./../images/campus/theo-thijssenhuis.jpg);
     }
-    &.wbh{
+
+    &.wbh {
       background-image: url(./../images/campus/wibauthuis.webp);
     }
-    &.speeltuin{
+
+    &.speeltuin {
       background-image: url(./../images/campus/speeltuin_2.webp);
     }
-    &.m{
+
+    &.m {
       background-image: url(./../images/campus/m-weesper2.jpeg);
       background-position: 50% 25%;
     }
-    
-}
 
-.intro-title {
+  }
+
+  .intro-title {
     text-shadow: 3px 3px 3px #1d1d1b;
     font-size: 3em;
     color: #eee;
     margin-left: 5vw;
-}
+  }
 
-main {
+  main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -627,24 +670,24 @@ main {
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
-}
+  }
 
-.left-content {
+  .left-content {
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.left-content img {
+  .left-content img {
     max-width: 100%;
     height: auto;
     border-radius: 0.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Zorgt ervoor dat de afbeelding altijd netjes binnen de sectie past */
-}
+  }
 
-.right-content {
+  .right-content {
     width: 60%;
     color: #003366;
     /* Donkerblauw voor tekst in de rechterkolom */
@@ -653,70 +696,76 @@ main {
     padding: 20px;
     border-radius: 0.5em;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.right-content h2 {
+  .right-content h2 {
     margin-bottom: 1em;
-}
+  }
 
-table {
+  table {
     width: 60%;
-    border-collapse: separate; /* Gebruik 'separate' om border-radius zichtbaar te maken */
+    border-collapse: separate;
+    /* Gebruik 'separate' om border-radius zichtbaar te maken */
     border-spacing: 0;
     background-color: rgba(0, 51, 102, 0.1);
-    border-radius: 0.3em; /* Border-radius van 0.8em */
+    border-radius: 0.3em;
+    /* Border-radius van 0.8em */
     overflow: hidden;
     margin-top: 20px;
     text-align: left;
-}
-thead {
+  }
+
+  thead {
     font-weight: 500;
     font-style: bold;
     width: 100%;
     margin-top: 5vh;
-}
+  }
 
-td {
-    
+  td {
+
     padding: 10px;
     border-bottom: 1px solid #ddd;
-}
+  }
 
-tbody tr:nth-child(odd) {
+  tbody tr:nth-child(odd) {
     background-color: #003366;
     color: #fff;
-}
+  }
 
-tbody tr:nth-child(even) {
+  tbody tr:nth-child(even) {
     background-color: transparent;
-}
+  }
 
-tr:last-child td {
+  tr:last-child td {
     border-bottom: none;
-}
+  }
 
-/* Media query voor mobiele apparaten (max breedte 768px) */
-@media (max-width: 768px) {
-    .left-content, .right-content {
-        width: 100%;
+  /* Media query voor mobiele apparaten (max breedte 768px) */
+  @media (max-width: 768px) {
+
+    .left-content,
+    .right-content {
+      width: 100%;
     }
 
     .left-content {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .left-content img {
-        width: 100%;
-        /* Op mobiele apparaten vult de afbeelding de volledige breedte van de sectie */
+      width: 100%;
+      /* Op mobiele apparaten vult de afbeelding de volledige breedte van de sectie */
     }
 
     .intro-title {
-        font-size: 2em;
+      font-size: 2em;
     }
-}
+  }
 
 }
-footer{
+
+footer {
   background-color: var(--color1);
   padding: 2em;
   color: var(--white);
@@ -728,7 +777,7 @@ footer{
 /* viresh campus page */
 
 .container {
-  min-width: 80vw;
+  width: 100%;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -742,48 +791,47 @@ footer{
   border-radius: 5px;
   align-items: center;
 
-  @media (max-width: 1150px) {
+  @media (max-width: 1300px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
 }
 
-.container-item{
+.container-item {
   display: grid;
   grid-template-columns: 16em 1fr 1fr;
-  grid-template-rows: 7em 1fr;
+  grid-template-rows: 6em;
   grid-template-areas:
-  "foto naam naam"
-  "foto openingstijden openingstijden"
+    "foto naam naam"
+    "foto openingstijden openingstijden"
   ;
+  gap: 1em;
 
-  @media (max-width: 640px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-    "foto"
-    "naam"	
-    "openingstijden"
+      "foto"
+      "naam"
+      "openingstijden"
     ;
   }
-}
-
-.a_style {
-  color: blue;
 }
 
 .huis-foto {
   grid-area: foto;
 }
+
 .huis-naam {
   grid-area: naam;
 }
+
 .huis-openingstijden {
   grid-area: openingstijden;
 }
 
 
-.img_style{
+.img_style {
   border-radius: 5px;
   /* de foto neemt de hele ruimte v/d grid cell */
   width: 100%;
@@ -792,7 +840,7 @@ footer{
 }
 
 .list-style {
-  margin: 5px;
+  margin: .5em;
   border: none;
   background-color: #ffffff;
   text-align: none;
@@ -800,7 +848,7 @@ footer{
   min-height: 10em;
   list-style-type: none;
 
-  @media (max-width: 640px) {
+  @media (max-width: 700px) {
     min-height: auto;
   }
 }
@@ -811,6 +859,7 @@ footer{
   width: 100%;
 }
 
-.td_style, .th_style {
+.td_style,
+.th_style {
   border: 1px solid black;
 }
