@@ -70,7 +70,7 @@ button {
     transition: 0.5s ease;
     >path{
       transition: 0.5s ease;
-      color: var(--white);
+      stroke: var(--white);
     }
   }
   &:hover{
