@@ -613,15 +613,15 @@ nav {
     width: 100%;
 
     &.ko {
-      background-image: url(./../images/campus/cafe-ko.webp);
+      background-image: url(./../images/campus/cafe-ko.jpg);
     }
 
     &.fest {
-      background-image: url(./../images/campus/cafe_fest.webp);
+      background-image: url(./../images/campus/cafe_fest.jpg);
     }
 
     &.bph {
-      background-image: url(./../images/campus/benno_premselahuis.webp);
+      background-image: url(./../images/campus/benno_premselahuis.jpg);
     }
 
     &.usc {
@@ -629,7 +629,7 @@ nav {
     }
 
     &.spar {
-      background-image: url(./../images/campus/spar_hva_campus.webp);
+      background-image: url(./../images/campus/spar_hva_campus.jpg);
     }
 
     &.ksh {
@@ -641,11 +641,11 @@ nav {
     }
 
     &.wbh {
-      background-image: url(./../images/campus/wibauthuis.webp);
+      background-image: url(./../images/campus/wibauthuis.jpg);
     }
 
     &.speeltuin {
-      background-image: url(./../images/campus/speeltuin_2.webp);
+      background-image: url(./../images/campus/speeltuin_2.jpg);
     }
 
     &.m {
