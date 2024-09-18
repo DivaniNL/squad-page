@@ -52,7 +52,7 @@ header {
 button {
   margin-top: auto;
   text-decoration: none;
-  color: var(--color1);
+  color: var(--white);
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -70,16 +70,14 @@ button {
     transition: 0.5s ease;
     >path{
       transition: 0.5s ease;
+      color: var(--white);
     }
   }
   &:hover{
     background-position: bottom;
-    color: var(--white);
+
     svg{
       transform: translateX(0.3rem);
-      >path{
-        stroke: var(--white);
-      }
     }
   }
 }
