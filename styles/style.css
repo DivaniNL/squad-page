@@ -1,9 +1,9 @@
 :root {
   --font1: "Montserrat", sans-serif;
   --color1: #0A1128;
-  --color2: #001F54;
+  --color2: #E6F9FF;
   --color3: #034078;
-  --color4: #1282A2;
+  --color4: #345f8a;
   --color5: #FFCD4C;
   --white: #FEFCFB;
 }
@@ -97,7 +97,7 @@ section#people {
     padding-top: 3rem;
     text-align: center;
     font-size: 40px;
-    color: var(--white);
+    color: var(--color1);
   }
 
   .swiper {
@@ -228,13 +228,13 @@ section#people {
     .swiper-button-prev {
       left: unset;
       right: calc(100% + 15px);
-      color: var(--white);
+      color: var(--color3);
     }
 
     .swiper-button-next {
       right: unset;
       left: calc(100% + 15px);
-      color: var(--white);
+      color: var(--color3);
     }
   }
 }
