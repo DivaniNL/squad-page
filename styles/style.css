@@ -729,6 +729,7 @@ nav {
   }
 
   tbody tr:nth-child(odd) {
+    /* ---------------------------------------------- */
     background-color: #003366;
     color: #fff;
   }
@@ -784,8 +785,6 @@ footer {
   grid-template-rows: 1fr;
 
   background-color: #f0f0f0;
-  padding-left: 3em;
-  padding-right: 3em;
   gap: 0.5em;
   border: none;
   border-radius: 5px;
