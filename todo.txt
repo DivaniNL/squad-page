@@ -1,7 +1,11 @@
 
-- samenvoegen
 - kleuren
-- alle Fotos en namen van squad + alle visitekaartjes links
+- alle visitekaartjes links
 - alle tekst en locaties als campus compleet hebben
 - alle detailpagina's
 - evt text in footer
+
+
+
+
+- alle classes toevoegen in de detailbanners
