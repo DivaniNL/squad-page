@@ -887,8 +887,12 @@ footer {
 .huis-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
+  padding: 1.2em 0;
+  .button{
+    margin-top: 1rem;
+  }
 }
 
 /* table lijnen */
