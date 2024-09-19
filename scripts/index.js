@@ -11,7 +11,7 @@ const swiper = new Swiper(".swiper-container", {
   breakpoints: {
     // when window width is >= 480px
     550: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       centeredSlides: false,
       spaceBetween: 0,
     },
