@@ -192,6 +192,7 @@ section#people {
               color: var(--white);
 
               .button {
+                /* --color5: #FFCD4C; (geel) Deze CTA-kleur is een goed voorbeeld van het toepassen van visuele hierarchie. Geel is een warme kleur. Blauw is een koude kleur. Hierdoor valt de knop in de actieve slide erg goed op. (complementaire kleuren) */
                 background-image: linear-gradient(var(--color5) 50%, var(--color1) 50%);
                 color: var(--color1);
 
@@ -366,6 +367,7 @@ section#campushome {
     }
 
     @media (min-width: 1000px) and (max-width: 1450px) {
+      /* Een grid met twee kolommen per rij. In de eerste 4 elementen wijken er twee elemten af van de andere qua grootte. */
       grid-template-columns: repeat(2, 1fr);
       height: 100em;
       grid-template-areas:
@@ -418,6 +420,8 @@ section#campushome {
     }
 
     @media (min-width: 1450px) {
+      /* Min-Query is een belangrijk onderdeel van je website Mobile-First maken */
+      /* Een grid met 6 kolommen per rij. Elke locatie heeft zijn eigen afmetingen. */
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(4, 1fr);
 
