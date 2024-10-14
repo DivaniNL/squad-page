@@ -1,90 +1,90 @@
 .container {
-    min-width: 80vw;
-  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  min-width: 80vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  background-color: #f0f0f0;
+  padding-left: 3em;
+  padding-right: 3em;
+  gap: 0.5em;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+
+  @media (max-width: 1150px) {
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  
-    background-color: #f0f0f0;
-    padding-left: 3em;
-    padding-right: 3em;
-    gap: 0.5em;
-    border: none;
-    border-radius: 5px;
-    align-items: center;
-  
-    @media (max-width: 1150px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
   }
+}
   
-  .container-item{
-    display: grid;
-    grid-template-columns: 19em 1fr 1fr;
-    grid-template-rows: 9em 1fr;
+.container-item{
+  display: grid;
+  grid-template-columns: 19em 1fr 1fr;
+  grid-template-rows: 9em 1fr;
+  grid-template-areas:
+  "foto naam naam"
+  "foto openingstijden openingstijden"
+  ;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
-    "foto naam naam"
-    "foto openingstijden openingstijden"
+    "foto"
+    "naam"	
+    "openingstijden"
     ;
-  
-    @media (max-width: 640px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-      "foto"
-      "naam"	
-      "openingstijden"
-      ;
-    }
   }
+}
   
-  .a_style {
-    color: blue;
+.a_style {
+  color: blue;
+}
+
+.huis-foto {
+  grid-area: foto;
+}
+.huis-naam {
+  grid-area: naam;
+}
+.huis-openingstijden {
+  grid-area: openingstijden;
+}
+
+
+.img_style{
+  border-radius: 5px;
+  /* de foto neemt de hele ruimte v/d grid cell */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-style {
+  margin: 5px;
+  border: none;
+  background-color: #ffffff;
+  text-align: none;
+  border-radius: 5px;
+  min-height: 10em;
+  list-style-type: none;
+
+  @media (max-width: 640px) {
+    min-height: auto;
   }
-  
-  .huis-foto {
-    grid-area: foto;
-  }
-  .huis-naam {
-    grid-area: naam;
-  }
-  .huis-openingstijden {
-    grid-area: openingstijden;
-  }
-  
-  
-  .img_style{
-    border-radius: 5px;
-    /* de foto neemt de hele ruimte v/d grid cell */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .list-style {
-    margin: 5px;
-    border: none;
-    background-color: #ffffff;
-    text-align: none;
-    border-radius: 5px;
-    min-height: 10em;
-    list-style-type: none;
-  
-    @media (max-width: 640px) {
-      min-height: auto;
-    }
-  }
-  
-  /* table lijnen */
-  .table_style {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .td_style, .th_style {
-    border: 1px solid black;
-  }
+}
+
+/* table lijnen */
+.table_style {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.td_style, .th_style {
+  border: 1px solid black;
+}
 
 
 
@@ -94,90 +94,90 @@
 
 /* --------------------------------- */
 
-  .container {
-    min-width: 80vw;
-  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.container {
+  min-width: 80vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  background-color: #f0f0f0;
+  padding-left: 3em;
+  padding-right: 3em;
+  gap: 0.5em;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+
+  @media (max-width: 1150px) {
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  
-    background-color: #f0f0f0;
-    padding-left: 3em;
-    padding-right: 3em;
-    gap: 0.5em;
-    border: none;
-    border-radius: 5px;
-    align-items: center;
-  
-    @media (max-width: 1150px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
   }
-  
-  .container-item{
-    display: grid;
-    grid-template-columns: 16em 1fr 1fr;
-    grid-template-rows: 6em 1fr;
+}
+
+.container-item{
+  display: grid;
+  grid-template-columns: 16em 1fr 1fr;
+  grid-template-rows: 6em 1fr;
+  grid-template-areas:
+  "foto naam naam"
+  "foto openingstijden openingstijden"
+  ;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
-    "foto naam naam"
-    "foto openingstijden openingstijden"
+    "foto"
+    "naam"	
+    "openingstijden"
     ;
-  
-    @media (max-width: 640px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-      "foto"
-      "naam"	
-      "openingstijden"
-      ;
-    }
   }
-  
-  .a_style {
-    color: blue;
+}
+
+.a_style {
+  color: blue;
+}
+
+.huis-foto {
+  grid-area: foto;
+}
+.huis-naam {
+  grid-area: naam;
+}
+.huis-openingstijden {
+  grid-area: openingstijden;
+}
+
+
+.img_style{
+  border-radius: 5px;
+  /* de foto neemt de hele ruimte v/d grid cell */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-style {
+  margin: 5px;
+  border: none;
+  background-color: #ffffff;
+  text-align: none;
+  border-radius: 5px;
+  min-height: 10em;
+  list-style-type: none;
+
+  @media (max-width: 640px) {
+    min-height: auto;
   }
-  
-  .huis-foto {
-    grid-area: foto;
-  }
-  .huis-naam {
-    grid-area: naam;
-  }
-  .huis-openingstijden {
-    grid-area: openingstijden;
-  }
-  
-  
-  .img_style{
-    border-radius: 5px;
-    /* de foto neemt de hele ruimte v/d grid cell */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .list-style {
-    margin: 5px;
-    border: none;
-    background-color: #ffffff;
-    text-align: none;
-    border-radius: 5px;
-    min-height: 10em;
-    list-style-type: none;
-  
-    @media (max-width: 640px) {
-      min-height: auto;
-    }
-  }
-  
-  /* table lijnen */
-  .table_style {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .td_style, .th_style {
-    border: 1px solid black;
-  }
+}
+
+/* table lijnen */
+.table_style {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.td_style, .th_style {
+  border: 1px solid black;
+}
